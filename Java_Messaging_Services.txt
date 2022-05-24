@@ -1,0 +1,64 @@
+Java Messaging Service(JMS) :
+
+JMS is similar to JDBC : Like JDBC API that can be used to access different databases, the JMS API provide vendor independebt access to enterprise
+messaging systems like JBoss messaging webspher MQ BEA Weblogic etc
+
+Java Messaging Service has 2 models:
+
+Point to point Queues
+Publish/Subscribe Toipics
+
+JMS Diagram :  (We have different actors in JMS diagram )
+
+-JMS Client : JMS Client is java application using JMS
+
+
+1)JMS Producer :  It is basically a Java Application or JMS client which produces (send) messages.
+
+2) JMS Consumer : It is JMS Client that  recives the messages through the JMS provider
+
+3) JMS Provider : JMS Provider is a messaging system that handle routing and deliveary of messages like Websphere MQ messaging, BEA Weblogic etc
+
+4) JMS Client can be both a producer and a consumer
+  Java application can send messages and can also recives the messages
+
+5) The combination of this different (many ) JMS Client and usually one JMS provider makes a JMS apllication.
+
+A JMS client can be both a producer and a consumer of messages.
+
+----------------------------------------------------------------------------------------
+
+JMS Publish/Subscribe Model
+
+
+- It is a one to many model.
+
+- We have on Publisher that publishes a messages to a Topic.
+
+- Here if we are using any messaging system like JBoss, WebSphere and BEA weblogic then will go into their admistration of that system and we will define the topics for pusblishing and reciving a messages from.
+
+- We have more than one subscriber the can recived that messages which are publish by publisher
+
+
+
+
+----------------------------------------------------------------------------------------
+
+
+Point-to-Point JMS Model
+
+-In Point to point JMS model we have sender that is sending messages to a Queue which are recevied by Possible Receiver. 
+
+-In Point-to-Point JMS model when message is send to Queue by sender that message is picked up by one Possible receiver at one time.
+
+-If anyone of the possible receiver pick up the message all the other Pssible receiver do not get that message in Point-To-Point JMS model.
+
+-Point-To-Point JMS model also know as One-to-One messagine model.
+
+
+
+
+
+
+
+
